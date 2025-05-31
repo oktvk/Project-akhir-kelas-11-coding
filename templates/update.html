@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tester</title>
+</head>
+<body>
+    <h2>update siswa</h2>
+    
+    <form action="/update/{{ siswa.id }}" method="post">
+        <input type="hidden" name="id" value="{{ siswa.id }}">
+        <label for="nama">Nama :</label>
+        <input name="nama" id="nama" value="{{ siswa.nama }}" required type="text"><br>
+        <label for="kelas">kelas :</label>
+        <input name="kelas" id="kelas" value="{{ siswa.kelas }}" required type="text"><br>
+        <button type="submit">Update</button>
+   </form>
+
+</body>
+</html>

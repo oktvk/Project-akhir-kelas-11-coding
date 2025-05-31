@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Customer</title>
+</head>
+<body>
+    <h2>Daftar Customer</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Nama</th>
+            <th>Jenis Kelamin</th>
+            <th>Hobi</th>
+        </tr>
+        {% for cust in customers %}
+        <tr>
+
+            <td>
+              <a href="{{ url_for('view_user_profile', user_id=cust.user_id) }}">
+                {{ cust.nama if cust.nama else '-' }}
+              </a>
+            </td>
+            <td>{{ cust.jk if cust.jk else '-' }}</td>
+            <td>{{ cust.hobi if cust.hobi else '-' }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('admin') }}">Kembali ke Admin Page</a>
+</body>
+</html>

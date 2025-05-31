@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz - Math Quiz{% endblock %}
+
+{% block content %}
+<div class="quiz-container">
+    <div class="progress-info">
+        <h3>Level {{ progress.current_level }}</h3>
+        <div class="progress-bar">
+            <div class="progress-fill" data-progress="{{ (progress.total_score % 100) }}"></div>
+        </div>
+        <p>Score: {{ progress.total_score }} | Questions: {{ progress.questions_attempted }} | Correct: {{ progress.correct_answers }}</p>
+    </div>
+
+    <div class="question-container">
+        <h2 class="question">{{ question }}</h2>
+        <form method="POST">
+            <input type="hidden" name="correct_answer" value="{{ correct_answer }}">
+            <div class="form-group">
+                <input type="number" step="any" name="answer" class="answer-input" required autofocus>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Answer</button>
+        </form>
+    </div>
+</div>
+{% endblock %} 
