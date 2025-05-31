@@ -63,16 +63,12 @@ Aplikasi kuis matematika sederhana untuk berlatih matematika. Dibuat dengan Flas
    - password (hashed)
 
 2. ProfileUser
-   - id (Primary Key)
-   - user_id (Foreign Key)
    - nama
    - jk (jenis kelamin)
    - hobi
    - alamat
 
 3. QuizProgress
-   - id (Primary Key)
-   - user_id (Foreign Key)
    - total_score
    - questions_attempted
    - correct_answers
