@@ -22,6 +22,14 @@ Aplikasi kuis matematika sederhana untuk berlatih matematika. Dibuat dengan Flas
    ```
 4. Buka browser dan akses `http://localhost:5000`
 
+-- Screenshot Aplikasi
+
+![Login Display](Screenshot/Login%20display.png)
+![Register Display](Screenshot/Register%20display.png)
+![Quiz Display](Screenshot/Quiz%20display.png)
+![Profile Display](Screenshot/Profile%20display.png)
+![Edit Profile Display](Screenshot/Edit_Profile%20display.png)
+
 -- Cara Main
 
 1. Register dulu untuk bikin akun baru
@@ -63,12 +71,16 @@ Aplikasi kuis matematika sederhana untuk berlatih matematika. Dibuat dengan Flas
    - password (hashed)
 
 2. ProfileUser
+   - id (Primary Key)
+   - user_id (Foreign Key)
    - nama
    - jk (jenis kelamin)
    - hobi
    - alamat
 
 3. QuizProgress
+   - id (Primary Key)
+   - user_id (Foreign Key)
    - total_score
    - questions_attempted
    - correct_answers
